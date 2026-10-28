@@ -1,5 +1,5 @@
-export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5001/api";
+const rawApiUrl = process.env.NEXT_PUBLIC_API_URL || "https://pharma-backend-psi.vercel.app/api";
+export const API_BASE_URL = rawApiUrl.endsWith("/") ? rawApiUrl.slice(0, -1) : rawApiUrl.endsWith("/api") ? rawApiUrl : `${rawApiUrl}/api`;
 
 export async function fetchFromApi<T = any>(
   endpoint: string,
