@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+.agents
+.gemini
+dist
+*.log
+.DS_Store
